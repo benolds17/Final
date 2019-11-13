@@ -1,0 +1,251 @@
+<!--Benjamin Reynolds
+Final Assignment for PROG3185-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Homepage of BRFeedback</title>
+    <!--jQuery-->
+    <script src="js/lib/jquery-2.1.4.js"></script>
+    <!--jQuery mobile-->
+    <script src="js/lib/jquery.mobile-1.4.5.js"></script>
+    <!--jQuery mobile css-->
+    <link rel="stylesheet" type="text/css" href="css/lib/jquery.mobile-1.4.5.css">
+    <!--jQuery mobile css-->
+    <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+    <!--global js script-->
+    <script src="js/lib/BRGlobal.js"></script>
+    <!--database js script-->
+    <script src="js/lib/BRDatabase.js"></script>
+    <!--feedbackDAL script-->
+    <script src="js/lib/BREmployeeDAL.js"></script>
+    <!--util script-->
+    <script src="js/lib/BRUtil.js"></script>
+    <!--facade script-->
+    <script src="js/lib/BRFacade.js"></script>
+    <!--validation script-->
+    <script src="js/lib/jquery.validate.js"></script>
+</head>
+    <body>
+        <!-- Home Page -->
+        <div data-role="page" id="BRHomePage">
+            <header data-role="header" data-theme="b" data-position="fixed">
+                <h1>BR Final Project</h1>
+                <div data-role="navbar" data-iconpos="top">
+                    <ul>
+                        <li><a href="#BRHomePage" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
+                        <li><a href="#BRAddCustomerPage" data-icon="plus">Add</a></li>
+                        <li><a href="#BRViewEmployeePage" data-icon="grid">Employees</a></li>
+                        <li><a href="#BRAboutPage" data-icon="gear">About</a></li>
+                    </ul>
+                </div>
+            </header>
+
+            <section data-role="content">
+                <h2>Kitchener Snow Removal</h2>
+
+
+            </section>
+
+            <footer data-role="footer" data-theme="b" data-position="fixed">
+                <h4>Copyright &copy; Benjamin Reynolds</h4>
+            </footer>
+        </div>
+
+        <!-- Add Employee Page -->
+        <div data-role="page" id="BRAddCustomerPage">
+            <header data-role="header" data-theme="b" data-position="fixed">
+                <h1>Add an Employee</h1>
+                <div data-role="navbar" data-iconpos="top">
+                    <ul>
+                        <li><a href="#BRHomePage" data-icon="home">Home</a></li>
+                        <li><a href="#BRAddCustomerPage" data-icon="plus" class="ui-btn-active ui-state-persist">Add</a></li>
+                        <li><a href="#BRViewEmployeePage" data-icon="grid">Employees</a></li>
+                        <li><a href="#BRAboutPage" data-icon="gear">About</a></li>
+                    </ul>
+                </div>
+            </header>
+            <section data-role="content">
+                <form id="brAddForm">
+
+                    <!--First name input-->
+                    <label for="txtFirstName">First name:</label>
+                    <input type="text" name="txtFirstName" id="txtFirstName">
+
+                    <!--Last name input-->
+                    <label for="txtLastName">Last name:</label>
+                    <input type="text" name="txtLastName" id="txtLastName">
+
+                    <!--Email input-->
+                    <label for="txtEmail">Email:</label>
+                    <input type="text" name="txtEmail" id="txtEmail">
+
+                    <!--Phone number input-->
+                    <label for="txtPhoneNum">Phone Number:</label>
+                    <input type="text" name="txtPhoneNum" id="txtPhoneNum">
+
+                    <!--Pay method input-->
+                    <label>Preferred Contact Method:</label>
+                    <select id="comboBoxPreferContact" >
+                        <option value="Email">Email</option>
+                        <option value="PhoneCall">Phone (call)</option>
+                        <option value="PhoneText">Phone (text)</option>
+                    </select>
+
+                    <!--Date input-->
+                    <label for="txtDateHired">Date of shovel:</label>
+                    <input type="date" name="txtDateHired" id="txtDateHired">
+
+                    <!--Time input-->
+                    <h3>Time can be scheduled between 6AM-11AM <br>
+                    and between 6PM-10PM</h3>
+                    <label for="txtTimeOfShovel">Time (please specify AM or PM):</label>
+                    <input type="text" name="txtTimeOfShovel" id="txtTimeOfShovel">
+
+                    <!--Time input-->
+                    <label for="txtPayAmount">Pay Amount($):</label>
+                    <input type="text" name="txtPayAmount" id="txtPayAmount">
+
+                    <!--Pay method input-->
+                    <label>Payment Method:</label>
+                    <select id="comboBoxPayMethod" >
+                        <option value="Cash">Cash</option>
+                        <option value="E-transfer">E-transfer</option>
+                    </select>
+
+                    <!--Additional Notes input-->
+                    <label for="txtAddNotes">Additional Notes:</label>
+                    <input type="text" name="txtAddNotes" id="txtAddNotes">
+
+                    <!--Submit button-->
+                    <fieldset data-role="controlgroup" data-type="horizontal">
+                        <button type="button" id="btnAddSubmit" name="btnAddSubmit" onclick="brAddCustomer()" data-theme="b">Save</button>
+                    </fieldset>
+                </form>
+            </section>
+
+            <footer data-role="footer" data-theme="b" data-position="fixed">
+                <h4>Copyright &copy; Benjamin Reynolds</h4>
+            </footer>
+        </div>
+
+        <!-- View Employee Page -->
+        <div data-role="page" id="BRViewEmployeePage">
+            <header data-role="header" data-theme="b" data-position="fixed">
+                <h1>View Employee</h1>
+                <div data-role="navbar" data-iconpos="top">
+                    <ul>
+                        <li><a href="#BRHomePage" data-icon="home">Home</a></li>
+                        <li><a href="#BRAddEmployeePage" data-icon="plus">Add</a></li>
+                        <li><a href="#BRViewEmployeePage" data-icon="grid" class="ui-btn-active ui-state-persist">Employees</a></li>
+                        <li><a href="#BRAboutPage" data-icon="gear">About</a></li>
+                    </ul>
+                </div>
+            </header>
+
+            <section data-role="content">
+
+                <ul id="listEmployees" data-role="listview">
+
+                    <li><a href="#BREditEmployeePage"></a></li>
+
+                </ul>
+
+            </section>
+
+            <footer data-role="footer" data-theme="b" data-position="fixed">
+                <h4>Copyright &copy; Benjamin Reynolds</h4>
+            </footer>
+        </div>
+
+        <!-- Edit Employees Page -->
+        <div data-role="page" id="BREditEmployeePage">
+            <header data-role="header" data-theme="b" data-position="fixed">
+                <h1>Edit Employee</h1>
+                <div data-role="navbar" data-iconpos="top">
+                    <ul>
+                        <li><a href="#BRHomePage" data-icon="home">Home</a></li>
+                        <li><a href="#BRAddEmployeePage" data-icon="plus">Add</a></li>
+                        <li><a href="#BRViewEmployeePage" data-icon="grid" class="ui-btn-active ui-state-persist">Employees</a></li>
+                        <li><a href="#BRAboutPage" data-icon="gear">About</a></li>
+                    </ul>
+                </div>
+            </header>
+
+            <section data-role="content">
+                <form id="brEditForm">
+
+                    <!--First name input-->
+                    <label for="txtEditFirstName">First name:</label>
+                    <input type="text" name="txtEditFirstName" id="txtEditFirstName">
+
+                    <!--Last name input-->
+                    <label for="txtEditLastName">Last name:</label>
+                    <input type="text" name="txtEditLastName" id="txtEditLastName">
+
+                    <!--Date hired input-->
+                    <label for="txtEditDateHired">Date hired:</label>
+                    <input type="date" name="txtEditDateHired" id="txtEditDateHired">
+
+                    <!--Type input-->
+                    <label>Department:</label>
+                    <select id="comboBoxEditDepartment">
+                        <option value="Shipping">Shipping</option>
+                        <option value="Office">Office</option>
+                        <option value="Manager">Manager</option>
+                    </select>
+
+                    <!--Submit button-->
+                    <fieldset data-role="controlgroup" data-type="horizontal">
+                        <button type="button" id="btnEditSubmit" name="btnEditSubmit" data-theme="b"
+                                onclick="brUpdateEmployee()">Update</button>
+                        <button type="button" id="btnEditDelete" name="btnEditDelete" data-theme="b"
+                                onclick="brDeleteEmployee()">Delete</button>
+
+                    </fieldset>
+
+                </form>
+            </section>
+
+            <footer data-role="footer" data-theme="b" data-position="fixed">
+                <h4>Copyright &copy; Benjamin Reynolds</h4>
+            </footer>
+        </div>
+
+        <!-- Settings Page -->
+        <div data-role="page" id="BRAboutPage">
+            <header data-role="header" data-theme="b" data-position="fixed">
+                <h1>About</h1>
+                <div data-role="navbar" data-iconpos="top">
+                    <ul>
+                        <li><a href="#BRHomePage" data-icon="home">Home</a></li>
+                        <li><a href="#BRAddEmployeePage" data-icon="plus">Add</a></li>
+                        <li><a href="#BRViewEmployeePage" data-icon="grid">Employees</a></li>
+                        <li><a href="#BRAboutPage" data-icon="gear" class="ui-btn-active ui-state-persist">About</a></li>
+                    </ul>
+                </div>
+            </header>
+
+            <section data-role="content">
+
+                <h3>App Developed By Ben Reynolds <br>
+                Final project for mobile app development <br>
+                Use the button below to clear the database of employees.</h3>
+
+                <button type="button" id="btnClearDatabase" name="btnClearDatabase" onclick="brClearDatabase()">Clear Database</button>
+
+                <div id="content"></div>
+            </section>
+
+            <footer data-role="footer" data-theme="b" data-position="fixed">
+                <h4>Copyright &copy; Benjamin Reynolds</h4>
+            </footer>
+        </div>
+
+
+
+    </body>
+</html>
+
+
+
