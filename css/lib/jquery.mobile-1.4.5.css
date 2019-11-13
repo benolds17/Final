@@ -4733,7 +4733,13 @@ html .ui-popup .ui-field-contain > label + .ui-flipswitch {
 	padding: 0;
 	border: 0;
 	outline: 0;
+    font-size: 18px;
 
+}
+
+.labelclass{
+    font-family: "Arial", Times, serif;
+    font-size:18px;
 }
 
 .combobox{
@@ -4749,6 +4755,34 @@ html .ui-popup .ui-field-contain > label + .ui-flipswitch {
 }
 
 .textclass{
-	font-family: Baskerville, "Baskerville Old Face", "Goudy Old Style", Garamond, "Times New Roman", serif;
+    font-family: "Arial", Times, serif;
 
+}
+
+.howitworks{
+    font-family: "Arial", Times, serif;
+    font-size: 18px;
+}
+
+.imgclass{
+    float:right;
+    width: 30%;
+    height: auto;
+}
+
+.aboutimage{
+    width: 20%;
+    height: 20%;
+}
+
+.homeimage{
+    float:right;
+    width:30%;
+    height:auto;
+}
+
+.hometext{
+    font-family: "Arial", Times, serif;
+    font-size: 22px;
+    color: black;
 }
