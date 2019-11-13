@@ -55,42 +55,69 @@ function validatePayShovelForm(){
             }
         }
     });
-    window.alert("Shovel request successfully submitted! Redirecting to homepage...");
-    return form.valid();
+    if(form.valid()){
+        window.alert("Shovel request successfully submitted! Redirecting to homepage...");
+        return form.valid();
+    }
 }
 
-function validateEditForm(){
+function validateSeasonalShovelForm(){
 
-    var form = $("#brEditForm");
+    var form = $("#brSeasonalShovelForm");
     form.validate({
 
         rules:{
-            txtEditFirstName:{
-                required:true,
-                rangelength:[2,20]
-            },
-            txtEditLastName:{
-                required:true,
-                rangelength:[2,20]
-            },
-            txtEditDateHired:{
+            txtSeasonalAddress:{
                 required:true,
             },
+            txtSeasonalFirstName:{
+                required:true,
+                rangelength:[2,30]
+            },
+            txtSeasonalLastName:{
+                required:true,
+                rangelength:[2,30]
+            },
+            txtSeasonalPhoneNum:{
+                required:true,
+                rangelength:[9,10]
+            },
+            txtSeasonalDateHired:{
+                required:true,
+            },
+            txtSeasonalPayAmount:{
+                required:true,
+            }
 
         },
         messages:{
-            txtEditFirstName:{
+            txtSeasonalAddress:{
+                required:"You must enter an address",
+            },
+            txtSeasonalFirstName:{
                 required:"You must enter a first name",
-                rangelength:"Must be between 2 and 20 characters"
+                rangelength:"Must be between 2 and 30 characters"
             },
-            txtEditLastName:{
+            txtSeasonalLastName:{
                 required:"You must enter a last name",
-                rangelength:"Must be between 2 and 20 characters"
+                rangelength:"Must be between 2 and 30 characters"
             },
-            txtEditDateHired:{
-                required:"You must enter date hired",
+            txtSeasonalPhoneNum:{
+                required:"You must enter a phone number",
+                rangelength:"Must be a valid phone number (do not use dashes)"
             },
+            txtSeasonalDateHired:{
+                required:"You must enter the date of the shovel",
+            },
+            txtSeasonalPayAmount:{
+                required:"You must enter a pay amount",
+            }
         }
     });
-    return form.valid();
+    if(form.valid()){
+        window.alert("Shovel request successfully submitted! Redirecting to homepage...");
+        return form.valid();
+    }
+
+
 }
