@@ -2,15 +2,7 @@
 //Benjamin Reynolds
 //Global functions
 
-//Run when program starts
+//Run when program starts to createDB
 $(document).ready(function () {
-    //init();
+
 });
-
-document
-    .getElementById("brAddForm")
-    .addEventListener("submit", function(e) {
-        e.preventDefault();
-        window.location.href = "#BRThankYou";
-    });
-
