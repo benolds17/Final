@@ -80,6 +80,7 @@ Final Assignment for PROG3185-->
 
 <!-- Pay Per Shovel Page -->
 <div data-role="page" id="BRPayPerShovel">
+    <div style="background-color:lightblue;">
     <header data-role="header" data-theme="b" data-position="fixed">
         <h1>Pay Per Shovel</h1>
         <div data-role="navbar" data-iconpos="top">
@@ -95,8 +96,10 @@ Final Assignment for PROG3185-->
     </header>
     <section data-role="content">
         <div class="formdiv">
-            <form id="brPayShovelForm" name="paypershovel" method="POST" data-netlify="true">
+            <form id="brPayShovelForm" name="paypershovel" method="POST" data-netlify="true" action="ThankYou.html">
 
+                <h3>Use the form below to sign up for a single driveway shovel. <br>
+                For more information go to the 'How it works' page.</h3>
 
                 <!--Address input-->
                 <label for="txtAddress">Address:</label>
@@ -139,13 +142,20 @@ Final Assignment for PROG3185-->
 
                 <!--Pay Amount input-->
                 <label for="txtPayAmount">Pay Amount($):</label>
-                <input type="text" name="txtPayAmount" id="txtPayAmount">
+                <input type="text" name="txtPayAmount" id="txtPayAmount" value="$">
 
                 <!--Pay method input-->
                 <label>Payment Method:</label>
                 <select name="comboBoxPayMethod" class="combobox">
                     <option value="Cash">Cash</option>
                     <option value="E-transfer">E-transfer</option>
+                </select>
+
+                <!--Pay method input-->
+                <label>Optional Driveway Salting (3$):</label>
+                <select name="comboBoxPayMethod" class="combobox">
+                    <option value="No">No</option>
+                    <option value="Yes">Yes (Adds 3$ to total)</option>
                 </select>
 
                 <!--Additional Notes input-->
@@ -166,6 +176,7 @@ Final Assignment for PROG3185-->
     <footer data-role="footer" data-theme="b" data-position="fixed">
         <h4>Copyright &copy; Benjamin Reynolds</h4>
     </footer>
+    </div>
 </div>
 
 <!-- Seasonal Shovel Page -->
@@ -233,7 +244,7 @@ Final Assignment for PROG3185-->
                 <li><a href="#BRPricing" data-icon="info">How It Works / Pricing</a></li>
                 <li><a href="#BRPayPerShovel" data-icon="plus">Pay Per Shovel</a></li>
                 <li><a href="#BRSeasonal" data-icon="calendar">Seasonal Shovelling</a></li>
-                <li><a href="#BRAboutPage" data-icon="user" class="ui-btn-active ui-state-persist">About</a></li>
+                <li><a href="#BRAboutPage" data-icon="user">About</a></li>
             </ul>
         </div>
     </header>
