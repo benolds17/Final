@@ -96,9 +96,9 @@ Final Assignment for PROG3185-->
     </header>
     <section data-role="content">
         <div class="formdiv">
-            <form id="brPayShovelForm" name="paypershovel" method="POST" data-netlify="true" action="ThankYou.html">
+            <form id="brPayShovelForm" name="paypershovel" method="POST" data-netlify="true">
 
-                <h3>Use the form below to sign up for a single driveway shovel. <br>
+                <h3 class="textclass">Use the form below to sign up for a single driveway shovel. <br>
                 For more information go to the 'How it works' page.</h3>
 
                 <!--Address input-->
@@ -153,7 +153,7 @@ Final Assignment for PROG3185-->
 
                 <!--Pay method input-->
                 <label>Optional Driveway Salting (3$):</label>
-                <select name="comboBoxPayMethod" class="combobox">
+                <select name="comboBoxDriveSalt" class="combobox">
                     <option value="No">No</option>
                     <option value="Yes">Yes (Adds 3$ to total)</option>
                 </select>
@@ -162,6 +162,8 @@ Final Assignment for PROG3185-->
                 <label for="txtAddNotes">Additional Notes:</label>
                 <input type="text" name="txtAddNotes" id="txtAddNotes">
 
+                <h3 class="textclass">After submission you will be returned to the homepage <br>
+                If required you will be contacted using your preferred contact method</h3>
                 <!--Submit button-->
                 <section onclick="validatePayShovelForm()">
 

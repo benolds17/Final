@@ -55,6 +55,7 @@ function validatePayShovelForm(){
             }
         }
     });
+    window.alert("Shovel request successfully submitted! Redirecting to homepage...");
     return form.valid();
 }
 

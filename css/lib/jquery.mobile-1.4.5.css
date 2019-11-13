@@ -4747,3 +4747,8 @@ html .ui-popup .ui-field-contain > label + .ui-flipswitch {
 	outline: 0;
 	color:blue;
 }
+
+.textclass{
+	font-family: Baskerville, "Baskerville Old Face", "Goudy Old Style", Garamond, "Times New Roman", serif;
+
+}
