@@ -24,13 +24,14 @@ Final Assignment for PROG3185-->
         <!-- Home Page -->
         <div data-role="page" id="BRHomePage">
             <header data-role="header" data-theme="b" data-position="fixed">
-                <h1>BR Final Project</h1>
+                <h1>BRShovel</h1>
                 <div data-role="navbar" data-iconpos="top">
                     <ul>
                         <li><a href="#BRHomePage" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
-                        <li><a href="#BRAddCustomerPage" data-icon="plus">Add</a></li>
-                        <li><a href="#BRViewEmployeePage" data-icon="grid">Employees</a></li>
-                        <li><a href="#BRAboutPage" data-icon="gear">About</a></li>
+                        <li><a href="#BRPricing" data-icon="info">How It Works / Pricing</a></li>
+                        <li><a href="#BRPayPerShovel" data-icon="plus">Pay Per Shovel</a></li>
+                        <li><a href="#BRSeasonal" data-icon="calendar">Seasonal Shovelling</a></li>
+                        <li><a href="#BRAboutPage" data-icon="user">About</a></li>
                     </ul>
                 </div>
             </header>
@@ -46,21 +47,48 @@ Final Assignment for PROG3185-->
             </footer>
         </div>
 
-        <!-- Add Employee Page -->
-        <div data-role="page" id="BRAddCustomerPage">
+        <!-- How it works / pricing Page -->
+        <div data-role="page" id="BRPricing">
+            <header data-role="header" data-theme="b" data-position="fixed">
+                <h1>BRShovel</h1>
+                <div data-role="navbar" data-iconpos="top">
+                    <ul>
+                        <li><a href="#BRHomePage" data-icon="home">Home</a></li>
+                        <li><a href="#BRPricing" data-icon="info" class="ui-btn-active ui-state-persist">How It Works / Pricing</a></li>
+                        <li><a href="#BRPayPerShovel" data-icon="plus">Pay Per Shovel</a></li>
+                        <li><a href="#BRSeasonal" data-icon="calendar">Seasonal Shovelling</a></li>
+                        <li><a href="#BRAboutPage" data-icon="user">About</a></li>
+                    </ul>
+                </div>
+            </header>
+
+            <section data-role="content">
+                <h2>Kitchener Snow Removal</h2>
+
+
+            </section>
+
+            <footer data-role="footer" data-theme="b" data-position="fixed">
+                <h4>Copyright &copy; Benjamin Reynolds</h4>
+            </footer>
+        </div>
+
+        <!-- Pay Per Shovel Page -->
+        <div data-role="page" id="BRPayPerShovel">
             <header data-role="header" data-theme="b" data-position="fixed">
                 <h1>Add an Employee</h1>
                 <div data-role="navbar" data-iconpos="top">
                     <ul>
                         <li><a href="#BRHomePage" data-icon="home">Home</a></li>
-                        <li><a href="#BRAddCustomerPage" data-icon="plus" class="ui-btn-active ui-state-persist">Add</a></li>
-                        <li><a href="#BRViewEmployeePage" data-icon="grid">Employees</a></li>
-                        <li><a href="#BRAboutPage" data-icon="gear">About</a></li>
+                        <li><a href="#BRPricing" data-icon="info">How It Works / Pricing</a></li>
+                        <li><a href="#BRPayPerShovel" data-icon="plus" class="ui-btn-active ui-state-persist">Pay Per Shovel</a></li>
+                        <li><a href="#BRSeasonal" data-icon="calendar">Seasonal Shovelling</a></li>
+                        <li><a href="#BRAboutPage" data-icon="user">About</a></li>
                     </ul>
                 </div>
             </header>
             <section data-role="content">
-                <form id="brAddForm" name="paypershovel" method="POST" data-netlify="true" onclick="validateAddForm()">
+                <form id="brPayShovelForm" name="paypershovel" method="POST" data-netlify="true">
 
                     <!--Address input-->
                     <label for="txtAddress">Address:</label>
@@ -95,10 +123,13 @@ Final Assignment for PROG3185-->
                     <input type="date" name="txtDateHired" id="txtDateHired">
 
                     <!--Time input-->
-                    <h3>Time can be scheduled between 6AM-11AM <br>
-                    and between 6PM-10PM</h3>
-                    <label for="txtTimeOfShovel">Time (please specify AM or PM):</label>
-                    <input type="text" name="txtTimeOfShovel" id="txtTimeOfShovel">
+                    <label>Time:</label>
+                    <select name="comboBoxTime" >
+                        <option value="6:00AM">6:00 AM</option>
+                        <option value="6:30AM">6:30 AM</option>
+                        <option value="7:00AM">7:00 AM</option>
+                        <option value="7:30AM">7:30 AM</option>
+                    </select>
 
                     <!--Pay Amount input-->
                     <label for="txtPayAmount">Pay Amount($):</label>
@@ -116,7 +147,10 @@ Final Assignment for PROG3185-->
                     <input type="text" name="txtAddNotes" id="txtAddNotes">
 
                     <!--Submit button-->
-                    <p><button type="submit">Submit</button></p>
+                    <section onclick="validatePayShovelForm()">
+                        <p><button type="submit" >Submit</button></p>
+                    </section>
+
                 </form>
             </section>
 
@@ -125,82 +159,25 @@ Final Assignment for PROG3185-->
             </footer>
         </div>
 
-        <!-- View Employee Page -->
-        <div data-role="page" id="BRViewEmployeePage">
+        <!-- Seasonal Shovel Page -->
+        <div data-role="page" id="BRSeasonal">
             <header data-role="header" data-theme="b" data-position="fixed">
                 <h1>View Employee</h1>
                 <div data-role="navbar" data-iconpos="top">
                     <ul>
                         <li><a href="#BRHomePage" data-icon="home">Home</a></li>
-                        <li><a href="#BRAddEmployeePage" data-icon="plus">Add</a></li>
-                        <li><a href="#BRViewEmployeePage" data-icon="grid" class="ui-btn-active ui-state-persist">Employees</a></li>
-                        <li><a href="#BRAboutPage" data-icon="gear">About</a></li>
+                        <li><a href="#BRPricing" data-icon="info">How It Works / Pricing</a></li>
+                        <li><a href="#BRPayPerShovel" data-icon="plus">Pay Per Shovel</a></li>
+                        <li><a href="#BRSeasonal" data-icon="calendar" class="ui-btn-active ui-state-persist">Seasonal Shovelling</a></li>
+                        <li><a href="#BRAboutPage" data-icon="user">About</a></li>
                     </ul>
                 </div>
             </header>
 
             <section data-role="content">
 
-                <ul id="listEmployees" data-role="listview">
+                <h3>to do add form</h3>
 
-                    <li><a href="#BREditEmployeePage"></a></li>
-
-                </ul>
-
-            </section>
-
-            <footer data-role="footer" data-theme="b" data-position="fixed">
-                <h4>Copyright &copy; Benjamin Reynolds</h4>
-            </footer>
-        </div>
-
-        <!-- Edit Employees Page -->
-        <div data-role="page" id="BREditEmployeePage">
-            <header data-role="header" data-theme="b" data-position="fixed">
-                <h1>Edit Employee</h1>
-                <div data-role="navbar" data-iconpos="top">
-                    <ul>
-                        <li><a href="#BRHomePage" data-icon="home">Home</a></li>
-                        <li><a href="#BRAddEmployeePage" data-icon="plus">Add</a></li>
-                        <li><a href="#BRViewEmployeePage" data-icon="grid" class="ui-btn-active ui-state-persist">Employees</a></li>
-                        <li><a href="#BRAboutPage" data-icon="gear">About</a></li>
-                    </ul>
-                </div>
-            </header>
-
-            <section data-role="content">
-                <form id="brEditForm">
-
-                    <!--First name input-->
-                    <label for="txtEditFirstName">First name:</label>
-                    <input type="text" name="txtEditFirstName" id="txtEditFirstName">
-
-                    <!--Last name input-->
-                    <label for="txtEditLastName">Last name:</label>
-                    <input type="text" name="txtEditLastName" id="txtEditLastName">
-
-                    <!--Date hired input-->
-                    <label for="txtEditDateHired">Date hired:</label>
-                    <input type="date" name="txtEditDateHired" id="txtEditDateHired">
-
-                    <!--Type input-->
-                    <label>Department:</label>
-                    <select id="comboBoxEditDepartment">
-                        <option value="Shipping">Shipping</option>
-                        <option value="Office">Office</option>
-                        <option value="Manager">Manager</option>
-                    </select>
-
-                    <!--Submit button-->
-                    <fieldset data-role="controlgroup" data-type="horizontal">
-                        <button type="button" id="btnEditSubmit" name="btnEditSubmit" data-theme="b"
-                                onclick="brUpdateEmployee()">Update</button>
-                        <button type="button" id="btnEditDelete" name="btnEditDelete" data-theme="b"
-                                onclick="brDeleteEmployee()">Delete</button>
-
-                    </fieldset>
-
-                </form>
             </section>
 
             <footer data-role="footer" data-theme="b" data-position="fixed">
@@ -215,9 +192,10 @@ Final Assignment for PROG3185-->
                 <div data-role="navbar" data-iconpos="top">
                     <ul>
                         <li><a href="#BRHomePage" data-icon="home">Home</a></li>
-                        <li><a href="#BRAddEmployeePage" data-icon="plus">Add</a></li>
-                        <li><a href="#BRViewEmployeePage" data-icon="grid">Employees</a></li>
-                        <li><a href="#BRAboutPage" data-icon="gear" class="ui-btn-active ui-state-persist">About</a></li>
+                        <li><a href="#BRPricing" data-icon="info">How It Works / Pricing</a></li>
+                        <li><a href="#BRPayPerShovel" data-icon="plus">Pay Per Shovel</a></li>
+                        <li><a href="#BRSeasonal" data-icon="calendar">Seasonal Shovelling</a></li>
+                        <li><a href="#BRAboutPage" data-icon="user" class="ui-btn-active ui-state-persist">About</a></li>
                     </ul>
                 </div>
             </header>
@@ -242,9 +220,10 @@ Final Assignment for PROG3185-->
                 <div data-role="navbar" data-iconpos="top">
                     <ul>
                         <li><a href="#BRHomePage" data-icon="home">Home</a></li>
-                        <li><a href="#BRAddCustomerPage" data-icon="plus">Add</a></li>
-                        <li><a href="#BRViewEmployeePage" data-icon="grid">Employees</a></li>
-                        <li><a href="#BRAboutPage" data-icon="gear">About</a></li>
+                        <li><a href="#BRPricing" data-icon="info">How It Works / Pricing</a></li>
+                        <li><a href="#BRPayPerShovel" data-icon="plus">Pay Per Shovel</a></li>
+                        <li><a href="#BRSeasonal" data-icon="calendar">Seasonal Shovelling</a></li>
+                        <li><a href="#BRAboutPage" data-icon="user" class="ui-btn-active ui-state-persist">About</a></li>
                     </ul>
                 </div>
             </header>

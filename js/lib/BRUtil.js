@@ -2,19 +2,26 @@
 //Benjamin Reynolds
 //Validation input
 
-function validateAddForm(){
+function validatePayShovelForm(){
 
-    var form = $("#brAddForm");
+    var form = $("#brPayShovelForm");
     form.validate({
 
         rules:{
+            txtAddress:{
+                required:true,
+            },
             txtFirstName:{
                 required:true,
-                rangelength:[2,20]
+                rangelength:[2,30]
             },
             txtLastName:{
                 required:true,
-                rangelength:[2,20]
+                rangelength:[2,30]
+            },
+            txtPhoneNum:{
+                required:true,
+                rangelength:[9,10]
             },
             txtDateHired:{
                 required:true,
@@ -22,16 +29,23 @@ function validateAddForm(){
 
         },
         messages:{
+            txtAddress:{
+                required:"You must enter an address",
+            },
             txtFirstName:{
                 required:"You must enter a first name",
-                rangelength:"Must be between 2 and 20 characters"
+                rangelength:"Must be between 2 and 30 characters"
             },
             txtLastName:{
                 required:"You must enter a last name",
-                rangelength:"Must be between 2 and 20 characters"
+                rangelength:"Must be between 2 and 30 characters"
+            },
+            txtPhoneNum:{
+                required:"You must enter a phone number",
+                rangelength:"Must be a valid phone number (do not use dashes)"
             },
             txtDateHired:{
-                required:"You must enter date hired",
+                required:"You must enter the date of the shovel",
             },
         }
     });
