@@ -66,61 +66,25 @@ Final Assignment for PROG3185-->
                 </div>
             </header>
             <section data-role="content">
-                <form id="brAddForm" name="paypershovel" method="POST" data-netlify="true">
-
-                    <!--First name input-->
-                    <label for="txtFirstName">First name:</label>
-                    <input type="text" name="txtFirstName" id="txtFirstName">
-
-                    <!--Last name input-->
-                    <label for="txtLastName">Last name:</label>
-                    <input type="text" name="txtLastName" id="txtLastName">
-
-                    <!--Email input-->
-                    <label for="txtEmail">Email:</label>
-                    <input type="text" name="txtEmail" id="txtEmail">
-
-                    <!--Phone number input-->
-                    <label for="txtPhoneNum">Phone Number:</label>
-                    <input type="text" name="txtPhoneNum" id="txtPhoneNum">
-
-                    <!--Pay method input-->
-                    <label>Preferred Contact Method:</label>
-                    <select id="comboBoxPreferContact" >
-                        <option value="Email">Email</option>
-                        <option value="PhoneCall">Phone (call)</option>
-                        <option value="PhoneText">Phone (text)</option>
-                    </select>
-
-                    <!--Date input-->
-                    <label for="txtDateHired">Date of shovel:</label>
-                    <input type="date" name="txtDateHired" id="txtDateHired">
-
-                    <!--Time input-->
-                    <h3>Time can be scheduled between 6AM-11AM <br>
-                    and between 6PM-10PM</h3>
-                    <label for="txtTimeOfShovel">Time (please specify AM or PM):</label>
-                    <input type="text" name="txtTimeOfShovel" id="txtTimeOfShovel">
-
-                    <!--Time input-->
-                    <label for="txtPayAmount">Pay Amount($):</label>
-                    <input type="text" name="txtPayAmount" id="txtPayAmount">
-
-                    <!--Pay method input-->
-                    <label>Payment Method:</label>
-                    <select id="comboBoxPayMethod" >
-                        <option value="Cash">Cash</option>
-                        <option value="E-transfer">E-transfer</option>
-                    </select>
-
-                    <!--Additional Notes input-->
-                    <label for="txtAddNotes">Additional Notes:</label>
-                    <input type="text" name="txtAddNotes" id="txtAddNotes">
-
-                    <!--Submit button-->
-                    <fieldset data-role="controlgroup" data-type="horizontal">
-                        <button type="submit" id="btnAddSubmit" name="btnAddSubmit" onclick="brAddCustomer()" data-theme="b">Save</button>
-                    </fieldset>
+                <form name="contact" method="POST" data-netlify="true">
+                    <p>
+                        <label>Your Name: <input type="text" name="name" /></label>
+                    </p>
+                    <p>
+                        <label>Your Email: <input type="email" name="email" /></label>
+                    </p>
+                    <p>
+                        <label>Your Role: <select name="role[]" multiple>
+                            <option value="leader">Leader</option>
+                            <option value="follower">Follower</option>
+                        </select></label>
+                    </p>
+                    <p>
+                        <label>Message: <textarea name="message"></textarea></label>
+                    </p>
+                    <p>
+                        <button type="submit">Send</button>
+                    </p>
                 </form>
             </section>
 
