@@ -20,230 +20,239 @@ Final Assignment for PROG3185-->
     <!--validation script-->
     <script src="js/lib/jquery.validate.js"></script>
 </head>
-    <body>
-        <!-- Home Page -->
-        <div data-role="page" id="BRHomePage">
-            <header data-role="header" data-theme="b" data-position="fixed">
-                <h1>BRShovel</h1>
-                <div data-role="navbar" data-iconpos="top">
-                    <ul>
-                        <li><a href="#BRHomePage" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
-                        <li><a href="#BRPricing" data-icon="info">How It Works / Pricing</a></li>
-                        <li><a href="#BRPayPerShovel" data-icon="plus">Pay Per Shovel</a></li>
-                        <li><a href="#BRSeasonal" data-icon="calendar">Seasonal Shovelling</a></li>
-                        <li><a href="#BRAboutPage" data-icon="user">About</a></li>
-                    </ul>
-                </div>
-            </header>
+<body>
+<!-- Home Page -->
+<div data-role="page" id="BRHomePage">
+    <div style="background-image: url('img/back.jpg');">
+        <header data-role="header" data-theme="b" data-position="fixed">
+            <h1>BRShovel</h1>
+            <div data-role="navbar" data-iconpos="top">
+                <ul>
+                    <li><a href="#BRHomePage" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
+                    <li><a href="#BRPricing" data-icon="info">How It Works / Pricing</a></li>
+                    <li><a href="#BRPayPerShovel" data-icon="plus">Pay Per Shovel</a></li>
+                    <li><a href="#BRSeasonal" data-icon="calendar">Seasonal Shovelling</a></li>
+                    <li><a href="#BRAboutPage" data-icon="user">About</a></li>
+                </ul>
+            </div>
+        </header>
 
-            <section data-role="content">
-                <h2>Kitchener Snow Removal</h2>
+        <section data-role="content">
+            <h2>Kitchener Snow Removal
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                BABY</h2>
 
 
-            </section>
+        </section>
 
-            <footer data-role="footer" data-theme="b" data-position="fixed">
-                <h4>Copyright &copy; Benjamin Reynolds</h4>
-            </footer>
+        <footer data-role="footer" data-theme="b" data-position="fixed">
+            <h4>Copyright &copy; Benjamin Reynolds</h4>
+        </footer>
+    </div>
+</div>
+
+<!-- How it works / pricing Page -->
+<div data-role="page" id="BRPricing">
+    <header data-role="header" data-theme="b" data-position="fixed">
+        <h1>How It Works / Pricing</h1>
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li><a href="#BRHomePage" data-icon="home">Home</a></li>
+                <li><a href="#BRPricing" data-icon="info" class="ui-btn-active ui-state-persist">How It Works /
+                    Pricing</a></li>
+                <li><a href="#BRPayPerShovel" data-icon="plus">Pay Per Shovel</a></li>
+                <li><a href="#BRSeasonal" data-icon="calendar">Seasonal Shovelling</a></li>
+                <li><a href="#BRAboutPage" data-icon="user">About</a></li>
+            </ul>
         </div>
+    </header>
 
-        <!-- How it works / pricing Page -->
-        <div data-role="page" id="BRPricing">
-            <header data-role="header" data-theme="b" data-position="fixed">
-                <h1>BRShovel</h1>
-                <div data-role="navbar" data-iconpos="top">
-                    <ul>
-                        <li><a href="#BRHomePage" data-icon="home">Home</a></li>
-                        <li><a href="#BRPricing" data-icon="info" class="ui-btn-active ui-state-persist">How It Works / Pricing</a></li>
-                        <li><a href="#BRPayPerShovel" data-icon="plus">Pay Per Shovel</a></li>
-                        <li><a href="#BRSeasonal" data-icon="calendar">Seasonal Shovelling</a></li>
-                        <li><a href="#BRAboutPage" data-icon="user">About</a></li>
-                    </ul>
-                </div>
-            </header>
-
-            <section data-role="content">
-                <h2>Kitchener Snow Removal</h2>
+    <section data-role="content">
+        <h2>Kitchener Snow Removal</h2>
 
 
-            </section>
+    </section>
 
-            <footer data-role="footer" data-theme="b" data-position="fixed">
-                <h4>Copyright &copy; Benjamin Reynolds</h4>
-            </footer>
+    <footer data-role="footer" data-theme="b" data-position="fixed">
+        <h4>Copyright &copy; Benjamin Reynolds</h4>
+    </footer>
+</div>
+
+<!-- Pay Per Shovel Page -->
+<div data-role="page" id="BRPayPerShovel">
+    <header data-role="header" data-theme="b" data-position="fixed">
+        <h1>Pay Per Shovel</h1>
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li><a href="#BRHomePage" data-icon="home">Home</a></li>
+                <li><a href="#BRPricing" data-icon="info">How It Works / Pricing</a></li>
+                <li><a href="#BRPayPerShovel" data-icon="plus" class="ui-btn-active ui-state-persist">Pay Per Shovel</a>
+                </li>
+                <li><a href="#BRSeasonal" data-icon="calendar">Seasonal Shovelling</a></li>
+                <li><a href="#BRAboutPage" data-icon="user">About</a></li>
+            </ul>
         </div>
+    </header>
+    <section data-role="content">
+        <div class="formdiv">
+            <form id="brPayShovelForm" name="paypershovel" method="POST" data-netlify="true">
 
-        <!-- Pay Per Shovel Page -->
-        <div data-role="page" id="BRPayPerShovel">
-            <header data-role="header" data-theme="b" data-position="fixed">
-                <h1>Add an Employee</h1>
-                <div data-role="navbar" data-iconpos="top">
-                    <ul>
-                        <li><a href="#BRHomePage" data-icon="home">Home</a></li>
-                        <li><a href="#BRPricing" data-icon="info">How It Works / Pricing</a></li>
-                        <li><a href="#BRPayPerShovel" data-icon="plus" class="ui-btn-active ui-state-persist">Pay Per Shovel</a></li>
-                        <li><a href="#BRSeasonal" data-icon="calendar">Seasonal Shovelling</a></li>
-                        <li><a href="#BRAboutPage" data-icon="user">About</a></li>
-                    </ul>
-                </div>
-            </header>
-            <section data-role="content">
-                <form id="brPayShovelForm" name="paypershovel" method="POST" data-netlify="true">
 
-                    <!--Address input-->
-                    <label for="txtAddress">Address:</label>
-                    <input type="text" name="txtAddress" id="txtAddress">
+                <!--Address input-->
+                <label for="txtAddress">Address:</label>
+                <input type="text" name="txtAddress" id="txtAddress">
 
-                    <!--First name input-->
-                    <label for="txtFirstName">First name:</label>
-                    <input type="text" name="txtFirstName" id="txtFirstName">
+                <!--First name input-->
+                <label for="txtFirstName">First name:</label>
+                <input type="text" name="txtFirstName" id="txtFirstName">
 
-                    <!--Last name input-->
-                    <label for="txtLastName">Last name:</label>
-                    <input type="text" name="txtLastName" id="txtLastName">
+                <!--Last name input-->
+                <label for="txtLastName">Last name:</label>
+                <input type="text" name="txtLastName" id="txtLastName">
 
-                    <!--Email input-->
-                    <label for="txtEmail">Email:</label>
-                    <input type="text" name="txtEmail" id="txtEmail">
+                <!--Email input-->
+                <label for="txtEmail">Email:</label>
+                <input type="text" name="txtEmail" id="txtEmail">
 
-                    <!--Phone number input-->
-                    <label for="txtPhoneNum">Phone Number:</label>
-                    <input type="text" name="txtPhoneNum" id="txtPhoneNum">
+                <!--Phone number input-->
+                <label for="txtPhoneNum">Phone Number:</label>
+                <input type="text" name="txtPhoneNum" id="txtPhoneNum">
 
-                    <!--Preferred Contact Method input-->
-                    <label>Preferred Contact Method:</label>
-                    <select name="comboBoxPreferContact" >
-                        <option value="Email">Email</option>
-                        <option value="PhoneCall">Phone (call)</option>
-                        <option value="PhoneText">Phone (text)</option>
-                    </select>
+                <!--Preferred Contact Method input-->
+                <label>Preferred Contact Method:</label>
+                <select name="comboBoxPreferContact" class="combobox">
+                    <option value="Email">Email</option>
+                    <option value="PhoneCall">Phone (call)</option>
+                    <option value="PhoneText">Phone (text)</option>
+                </select>
 
-                    <!--Date input-->
-                    <label for="txtDateHired">Date of shovel:</label>
-                    <input type="date" name="txtDateHired" id="txtDateHired">
+                <!--Date input-->
+                <label for="txtDateHired">Date of shovel:</label>
+                <input type="date" name="txtDateHired" id="txtDateHired">
 
-                    <!--Time input-->
-                    <label>Time:</label>
-                    <select name="comboBoxTime" >
-                        <option value="6:00AM">6:00 AM</option>
-                        <option value="6:30AM">6:30 AM</option>
-                        <option value="7:00AM">7:00 AM</option>
-                        <option value="7:30AM">7:30 AM</option>
-                    </select>
+                <!--Time input-->
+                <label>Time:</label>
+                <select name="comboBoxTime" class="combobox">
+                    <option value="6:00AM">6:00 AM</option>
+                    <option value="6:30AM">6:30 AM</option>
+                </select>
 
-                    <!--Pay Amount input-->
-                    <label for="txtPayAmount">Pay Amount($):</label>
-                    <input type="text" name="txtPayAmount" id="txtPayAmount">
+                <!--Pay Amount input-->
+                <label for="txtPayAmount">Pay Amount($):</label>
+                <input type="text" name="txtPayAmount" id="txtPayAmount">
 
-                    <!--Pay method input-->
-                    <label>Payment Method:</label>
-                    <select name="comboBoxPayMethod" >
-                        <option value="Cash">Cash</option>
-                        <option value="E-transfer">E-transfer</option>
-                    </select>
+                <!--Pay method input-->
+                <label>Payment Method:</label>
+                <select name="comboBoxPayMethod" class="combobox">
+                    <option value="Cash">Cash</option>
+                    <option value="E-transfer">E-transfer</option>
+                </select>
 
-                    <!--Additional Notes input-->
-                    <label for="txtAddNotes">Additional Notes:</label>
-                    <input type="text" name="txtAddNotes" id="txtAddNotes">
+                <!--Additional Notes input-->
+                <label for="txtAddNotes">Additional Notes:</label>
+                <input type="text" name="txtAddNotes" id="txtAddNotes">
 
-                    <!--Submit button-->
-                    <section onclick="validatePayShovelForm()">
-                        <p><button type="submit" >Submit</button></p>
-                    </section>
+                <!--Submit button-->
+                <section onclick="validatePayShovelForm()">
 
-                </form>
-            </section>
+                    <button type="submit">Submit</button>
 
-            <footer data-role="footer" data-theme="b" data-position="fixed">
-                <h4>Copyright &copy; Benjamin Reynolds</h4>
-            </footer>
+                </section>
+
+            </form>
         </div>
+    </section>
 
-        <!-- Seasonal Shovel Page -->
-        <div data-role="page" id="BRSeasonal">
-            <header data-role="header" data-theme="b" data-position="fixed">
-                <h1>View Employee</h1>
-                <div data-role="navbar" data-iconpos="top">
-                    <ul>
-                        <li><a href="#BRHomePage" data-icon="home">Home</a></li>
-                        <li><a href="#BRPricing" data-icon="info">How It Works / Pricing</a></li>
-                        <li><a href="#BRPayPerShovel" data-icon="plus">Pay Per Shovel</a></li>
-                        <li><a href="#BRSeasonal" data-icon="calendar" class="ui-btn-active ui-state-persist">Seasonal Shovelling</a></li>
-                        <li><a href="#BRAboutPage" data-icon="user">About</a></li>
-                    </ul>
-                </div>
-            </header>
+    <footer data-role="footer" data-theme="b" data-position="fixed">
+        <h4>Copyright &copy; Benjamin Reynolds</h4>
+    </footer>
+</div>
 
-            <section data-role="content">
-
-                <h3>to do add form</h3>
-
-            </section>
-
-            <footer data-role="footer" data-theme="b" data-position="fixed">
-                <h4>Copyright &copy; Benjamin Reynolds</h4>
-            </footer>
+<!-- Seasonal Shovel Page -->
+<div data-role="page" id="BRSeasonal">
+    <header data-role="header" data-theme="b" data-position="fixed">
+        <h1>Seasonal Shovel</h1>
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li><a href="#BRHomePage" data-icon="home">Home</a></li>
+                <li><a href="#BRPricing" data-icon="info">How It Works / Pricing</a></li>
+                <li><a href="#BRPayPerShovel" data-icon="plus">Pay Per Shovel</a></li>
+                <li><a href="#BRSeasonal" data-icon="calendar" class="ui-btn-active ui-state-persist">Seasonal
+                    Shovelling</a></li>
+                <li><a href="#BRAboutPage" data-icon="user">About</a></li>
+            </ul>
         </div>
+    </header>
 
-        <!-- Settings Page -->
-        <div data-role="page" id="BRAboutPage">
-            <header data-role="header" data-theme="b" data-position="fixed">
-                <h1>About</h1>
-                <div data-role="navbar" data-iconpos="top">
-                    <ul>
-                        <li><a href="#BRHomePage" data-icon="home">Home</a></li>
-                        <li><a href="#BRPricing" data-icon="info">How It Works / Pricing</a></li>
-                        <li><a href="#BRPayPerShovel" data-icon="plus">Pay Per Shovel</a></li>
-                        <li><a href="#BRSeasonal" data-icon="calendar">Seasonal Shovelling</a></li>
-                        <li><a href="#BRAboutPage" data-icon="user" class="ui-btn-active ui-state-persist">About</a></li>
-                    </ul>
-                </div>
-            </header>
+    <section data-role="content">
 
-            <section data-role="content">
+        <h3>to do add form</h3>
 
-                <h3>App Developed By Ben Reynolds <br>
-                Final project for mobile app development <br>
-                Use the button below to clear the database of employees.</h3>
+    </section>
 
-            </section>
+    <footer data-role="footer" data-theme="b" data-position="fixed">
+        <h4>Copyright &copy; Benjamin Reynolds</h4>
+    </footer>
+</div>
 
-            <footer data-role="footer" data-theme="b" data-position="fixed">
-                <h4>Copyright &copy; Benjamin Reynolds</h4>
-            </footer>
+<!-- Settings Page -->
+<div data-role="page" id="BRAboutPage">
+    <header data-role="header" data-theme="b" data-position="fixed">
+        <h1>About</h1>
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li><a href="#BRHomePage" data-icon="home">Home</a></li>
+                <li><a href="#BRPricing" data-icon="info">How It Works / Pricing</a></li>
+                <li><a href="#BRPayPerShovel" data-icon="plus">Pay Per Shovel</a></li>
+                <li><a href="#BRSeasonal" data-icon="calendar">Seasonal Shovelling</a></li>
+                <li><a href="#BRAboutPage" data-icon="user" class="ui-btn-active ui-state-persist">About</a></li>
+            </ul>
         </div>
+    </header>
 
-        <!-- Thank you Page -->
-        <div data-role="page" id="BRThankYou">
-            <header data-role="header" data-theme="b" data-position="fixed">
-                <h1>About</h1>
-                <div data-role="navbar" data-iconpos="top">
-                    <ul>
-                        <li><a href="#BRHomePage" data-icon="home">Home</a></li>
-                        <li><a href="#BRPricing" data-icon="info">How It Works / Pricing</a></li>
-                        <li><a href="#BRPayPerShovel" data-icon="plus">Pay Per Shovel</a></li>
-                        <li><a href="#BRSeasonal" data-icon="calendar">Seasonal Shovelling</a></li>
-                        <li><a href="#BRAboutPage" data-icon="user" class="ui-btn-active ui-state-persist">About</a></li>
-                    </ul>
-                </div>
-            </header>
+    <section data-role="content">
 
-            <section data-role="content">
+        <h3>App Developed By Ben Reynolds <br>
+            Final project for mobile app development <br>
+            Use the button below to clear the database of employees.</h3>
 
-                <h3>Thank you for your submission! <br>
-                    You will be contacted by your preferred method of contact to confirm the snow shovel <br>
-                    For any questions do not hesitate to email me at benolds98@gmail.com <br> </h3>
+    </section>
 
-            </section>
+    <footer data-role="footer" data-theme="b" data-position="fixed">
+        <h4>Copyright &copy; Benjamin Reynolds</h4>
+    </footer>
+</div>
 
-            <footer data-role="footer" data-theme="b" data-position="fixed">
-                <h4>Copyright &copy; Benjamin Reynolds</h4>
-            </footer>
+<!-- Thank you Page -->
+<div data-role="page" id="BRThankYou">
+    <header data-role="header" data-theme="b" data-position="fixed">
+        <h1>About</h1>
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li><a href="#BRHomePage" data-icon="home">Home</a></li>
+                <li><a href="#BRPricing" data-icon="info">How It Works / Pricing</a></li>
+                <li><a href="#BRPayPerShovel" data-icon="plus">Pay Per Shovel</a></li>
+                <li><a href="#BRSeasonal" data-icon="calendar">Seasonal Shovelling</a></li>
+                <li><a href="#BRAboutPage" data-icon="user" class="ui-btn-active ui-state-persist">About</a></li>
+            </ul>
         </div>
+    </header>
+
+    <section data-role="content">
+
+        <h3>Thank you for your submission! <br>
+            You will be contacted by your preferred method of contact to confirm the snow shovel <br>
+            For any questions do not hesitate to email me at benolds98@gmail.com <br></h3>
+
+    </section>
+
+    <footer data-role="footer" data-theme="b" data-position="fixed">
+        <h5>Copyright &copy; Benjamin Reynolds</h5>
+    </footer>
+</div>
 
 
-
-    </body>
+</body>
 </html>
 
 

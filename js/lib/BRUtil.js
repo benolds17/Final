@@ -26,6 +26,9 @@ function validatePayShovelForm(){
             txtDateHired:{
                 required:true,
             },
+            txtPayAmount:{
+                required:true,
+            }
 
         },
         messages:{
@@ -47,6 +50,9 @@ function validatePayShovelForm(){
             txtDateHired:{
                 required:"You must enter the date of the shovel",
             },
+            txtPayAmount:{
+                required:"You must enter a pay amount",
+            }
         }
     });
     return form.valid();

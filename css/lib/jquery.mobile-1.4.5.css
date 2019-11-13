@@ -4723,3 +4723,27 @@ html .ui-popup .ui-field-contain > label + .ui-flipswitch {
 	margin-right: auto;
 	width: 50%;
 }
+
+.formdiv{
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 65%;
+	height: 100%;
+	padding: 0;
+	border: 0;
+	outline: 0;
+
+}
+
+.combobox{
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	color:blue;
+}
