@@ -7,4 +7,10 @@ $(document).ready(function () {
     //init();
 });
 
+document
+    .getElementById("brAddForm")
+    .addEventListener("submit", function(e) {
+        e.preventDefault();
+        window.location.href = "#BRThankYou";
+    });
 
