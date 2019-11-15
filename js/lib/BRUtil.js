@@ -11,16 +11,14 @@ function validatePayShovelForm(){
             txtAddress:{
                 required:true,
             },
-            txtFirstName:{
+            txtContactName:{
                 required:true,
-                rangelength:[2,30]
+                rangelength:[2,50]
             },
-            txtLastName:{
+            txtEmail:{
                 required:true,
-                rangelength:[2,30]
             },
             txtPhoneNum:{
-                required:true,
                 rangelength:[9,10]
             },
             txtDateHired:{
@@ -35,16 +33,14 @@ function validatePayShovelForm(){
             txtAddress:{
                 required:"You must enter an address",
             },
-            txtFirstName:{
-                required:"You must enter a first name",
-                rangelength:"Must be between 2 and 30 characters"
+            txtContactName:{
+                required:"You must enter a contact name",
+                rangelength:"Must be between 2 and 50 characters"
             },
-            txtLastName:{
-                required:"You must enter a last name",
-                rangelength:"Must be between 2 and 30 characters"
+            txtEmail:{
+                required:"You must enter an email"
             },
             txtPhoneNum:{
-                required:"You must enter a phone number",
                 rangelength:"Must be a valid phone number (do not use dashes)"
             },
             txtDateHired:{
@@ -70,13 +66,9 @@ function validateSeasonalShovelForm(){
             txtSeasonalAddress:{
                 required:true,
             },
-            txtSeasonalFirstName:{
+            txtSeasonalContactName:{
                 required:true,
-                rangelength:[2,30]
-            },
-            txtSeasonalLastName:{
-                required:true,
-                rangelength:[2,30]
+                rangelength:[2,50]
             },
             txtSeasonalPhoneNum:{
                 required:true,
@@ -94,13 +86,9 @@ function validateSeasonalShovelForm(){
             txtSeasonalAddress:{
                 required:"You must enter an address",
             },
-            txtSeasonalFirstName:{
+            txtSeasonalContactName:{
                 required:"You must enter a first name",
-                rangelength:"Must be between 2 and 30 characters"
-            },
-            txtSeasonalLastName:{
-                required:"You must enter a last name",
-                rangelength:"Must be between 2 and 30 characters"
+                rangelength:"Must be between 2 and 50 characters"
             },
             txtSeasonalPhoneNum:{
                 required:"You must enter a phone number",

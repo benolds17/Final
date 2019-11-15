@@ -4744,10 +4744,8 @@ html .ui-popup .ui-field-contain > label + .ui-flipswitch {
 
 .combobox{
 	position: relative;
-	top: 0;
-	left: 0;
 	width: 100%;
-	height: 100%;
+	height: 90%;
 	padding: 0;
 	border: 0;
 	outline: 0;
@@ -4785,4 +4783,32 @@ html .ui-popup .ui-field-contain > label + .ui-flipswitch {
     font-family: "Arial", Times, serif;
     font-size: 30px;
     color: black;
+}
+
+.two-col {
+	overflow: hidden;/* Makes this div contain its floats */
+	background-color:lightblue;
+}
+
+.two-col .col1,
+.two-col .col2 {
+	width: 49%;
+	background-color:lightblue;
+}
+
+.two-col .col1 {
+	float: left;
+}
+
+.two-col .col2 {
+	float: right;
+}
+
+.two-col label {
+	display: block;
+}
+
+html, body {
+	margin: 0;
+	height: 100%;
 }
