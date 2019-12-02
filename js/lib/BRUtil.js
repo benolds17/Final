@@ -70,9 +70,8 @@ function validateSeasonalShovelForm(){
                 required:true,
                 rangelength:[2,50]
             },
-            txtSeasonalPhoneNum:{
+            txtSeasonalEmail:{
                 required:true,
-                rangelength:[9,10]
             },
             txtSeasonalDateHired:{
                 required:true,
@@ -90,9 +89,8 @@ function validateSeasonalShovelForm(){
                 required:"You must enter a first name",
                 rangelength:"Must be between 2 and 50 characters"
             },
-            txtSeasonalPhoneNum:{
-                required:"You must enter a phone number",
-                rangelength:"Must be a valid phone number (do not use dashes)"
+            txtSeasonalEmail:{
+                required:"You must enter an email address",
             },
             txtSeasonalDateHired:{
                 required:"You must enter the date of the shovel",
