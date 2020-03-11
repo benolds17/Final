@@ -2,7 +2,22 @@
 //Benjamin Reynolds
 //Global functions
 
-//Run when program starts to createDB
-$(document).ready(function () {
+function fToC(){
 
-});
+    var temp = document.getElementById("input").value;
+
+    var calc = (temp-32) * 5/9;
+
+    document.getElementById("output").value = calc;
+
+}
+
+function cToF(){
+
+    var temp = document.getElementById("input").value;
+
+    var calc = temp * 9/5+32;
+
+    document.getElementById("output").value = calc;
+
+}
